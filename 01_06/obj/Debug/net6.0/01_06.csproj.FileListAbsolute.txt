@@ -1,0 +1,15 @@
+/home/todd/Projects/C#Tutorials/01_06/bin/Debug/net6.0/01_06
+/home/todd/Projects/C#Tutorials/01_06/bin/Debug/net6.0/01_06.deps.json
+/home/todd/Projects/C#Tutorials/01_06/bin/Debug/net6.0/01_06.runtimeconfig.json
+/home/todd/Projects/C#Tutorials/01_06/bin/Debug/net6.0/01_06.dll
+/home/todd/Projects/C#Tutorials/01_06/bin/Debug/net6.0/ref/01_06.dll
+/home/todd/Projects/C#Tutorials/01_06/bin/Debug/net6.0/01_06.pdb
+/home/todd/Projects/C#Tutorials/01_06/obj/Debug/net6.0/01_06.csproj.AssemblyReference.cache
+/home/todd/Projects/C#Tutorials/01_06/obj/Debug/net6.0/01_06.GeneratedMSBuildEditorConfig.editorconfig
+/home/todd/Projects/C#Tutorials/01_06/obj/Debug/net6.0/01_06.AssemblyInfoInputs.cache
+/home/todd/Projects/C#Tutorials/01_06/obj/Debug/net6.0/01_06.AssemblyInfo.cs
+/home/todd/Projects/C#Tutorials/01_06/obj/Debug/net6.0/01_06.csproj.CoreCompileInputs.cache
+/home/todd/Projects/C#Tutorials/01_06/obj/Debug/net6.0/01_06.dll
+/home/todd/Projects/C#Tutorials/01_06/obj/Debug/net6.0/ref/01_06.dll
+/home/todd/Projects/C#Tutorials/01_06/obj/Debug/net6.0/01_06.pdb
+/home/todd/Projects/C#Tutorials/01_06/obj/Debug/net6.0/01_06.genruntimeconfig.cache

@@ -1,0 +1,15 @@
+/home/todd/Projects/C#Tutorials/hangman/bin/Debug/net7.0/hangman
+/home/todd/Projects/C#Tutorials/hangman/bin/Debug/net7.0/hangman.deps.json
+/home/todd/Projects/C#Tutorials/hangman/bin/Debug/net7.0/hangman.runtimeconfig.json
+/home/todd/Projects/C#Tutorials/hangman/bin/Debug/net7.0/hangman.dll
+/home/todd/Projects/C#Tutorials/hangman/bin/Debug/net7.0/hangman.pdb
+/home/todd/Projects/C#Tutorials/hangman/obj/Debug/net7.0/hangman.csproj.AssemblyReference.cache
+/home/todd/Projects/C#Tutorials/hangman/obj/Debug/net7.0/hangman.GeneratedMSBuildEditorConfig.editorconfig
+/home/todd/Projects/C#Tutorials/hangman/obj/Debug/net7.0/hangman.AssemblyInfoInputs.cache
+/home/todd/Projects/C#Tutorials/hangman/obj/Debug/net7.0/hangman.AssemblyInfo.cs
+/home/todd/Projects/C#Tutorials/hangman/obj/Debug/net7.0/hangman.csproj.CoreCompileInputs.cache
+/home/todd/Projects/C#Tutorials/hangman/obj/Debug/net7.0/hangman.dll
+/home/todd/Projects/C#Tutorials/hangman/obj/Debug/net7.0/refint/hangman.dll
+/home/todd/Projects/C#Tutorials/hangman/obj/Debug/net7.0/hangman.pdb
+/home/todd/Projects/C#Tutorials/hangman/obj/Debug/net7.0/hangman.genruntimeconfig.cache
+/home/todd/Projects/C#Tutorials/hangman/obj/Debug/net7.0/ref/hangman.dll

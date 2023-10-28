@@ -1,0 +1,15 @@
+/home/todd/Projects/C#Tutorials/MyApp/bin/Debug/net6.0/MyApp
+/home/todd/Projects/C#Tutorials/MyApp/bin/Debug/net6.0/MyApp.deps.json
+/home/todd/Projects/C#Tutorials/MyApp/bin/Debug/net6.0/MyApp.runtimeconfig.json
+/home/todd/Projects/C#Tutorials/MyApp/bin/Debug/net6.0/MyApp.dll
+/home/todd/Projects/C#Tutorials/MyApp/bin/Debug/net6.0/MyApp.pdb
+/home/todd/Projects/C#Tutorials/MyApp/obj/Debug/net6.0/MyApp.csproj.AssemblyReference.cache
+/home/todd/Projects/C#Tutorials/MyApp/obj/Debug/net6.0/MyApp.GeneratedMSBuildEditorConfig.editorconfig
+/home/todd/Projects/C#Tutorials/MyApp/obj/Debug/net6.0/MyApp.AssemblyInfoInputs.cache
+/home/todd/Projects/C#Tutorials/MyApp/obj/Debug/net6.0/MyApp.AssemblyInfo.cs
+/home/todd/Projects/C#Tutorials/MyApp/obj/Debug/net6.0/MyApp.csproj.CoreCompileInputs.cache
+/home/todd/Projects/C#Tutorials/MyApp/obj/Debug/net6.0/MyApp.dll
+/home/todd/Projects/C#Tutorials/MyApp/obj/Debug/net6.0/refint/MyApp.dll
+/home/todd/Projects/C#Tutorials/MyApp/obj/Debug/net6.0/MyApp.pdb
+/home/todd/Projects/C#Tutorials/MyApp/obj/Debug/net6.0/MyApp.genruntimeconfig.cache
+/home/todd/Projects/C#Tutorials/MyApp/obj/Debug/net6.0/ref/MyApp.dll

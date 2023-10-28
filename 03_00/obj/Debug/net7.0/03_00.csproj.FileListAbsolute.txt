@@ -1,0 +1,15 @@
+/home/todd/Projects/C#Tutorials/03_00/bin/Debug/net7.0/03_00
+/home/todd/Projects/C#Tutorials/03_00/bin/Debug/net7.0/03_00.deps.json
+/home/todd/Projects/C#Tutorials/03_00/bin/Debug/net7.0/03_00.runtimeconfig.json
+/home/todd/Projects/C#Tutorials/03_00/bin/Debug/net7.0/03_00.dll
+/home/todd/Projects/C#Tutorials/03_00/bin/Debug/net7.0/03_00.pdb
+/home/todd/Projects/C#Tutorials/03_00/obj/Debug/net7.0/03_00.csproj.AssemblyReference.cache
+/home/todd/Projects/C#Tutorials/03_00/obj/Debug/net7.0/03_00.GeneratedMSBuildEditorConfig.editorconfig
+/home/todd/Projects/C#Tutorials/03_00/obj/Debug/net7.0/03_00.AssemblyInfoInputs.cache
+/home/todd/Projects/C#Tutorials/03_00/obj/Debug/net7.0/03_00.AssemblyInfo.cs
+/home/todd/Projects/C#Tutorials/03_00/obj/Debug/net7.0/03_00.csproj.CoreCompileInputs.cache
+/home/todd/Projects/C#Tutorials/03_00/obj/Debug/net7.0/03_00.dll
+/home/todd/Projects/C#Tutorials/03_00/obj/Debug/net7.0/refint/03_00.dll
+/home/todd/Projects/C#Tutorials/03_00/obj/Debug/net7.0/03_00.pdb
+/home/todd/Projects/C#Tutorials/03_00/obj/Debug/net7.0/03_00.genruntimeconfig.cache
+/home/todd/Projects/C#Tutorials/03_00/obj/Debug/net7.0/ref/03_00.dll

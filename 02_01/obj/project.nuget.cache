@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "JX3WucmXJSMk7Jpdwy0vLiyef3pSEHtyIazsYHIvEj7X2RNVEx4qFJIDXOAeIm1iOJQRPeN0mJuYaPnBamcDsQ==",
+  "success": true,
+  "projectFilePath": "/home/todd/Projects/C#Tutorials/02_01/02_01.fsproj",
+  "expectedPackageFiles": [
+    "/home/todd/.nuget/packages/fsharp.core/7.0.0/fsharp.core.7.0.0.nupkg.sha512",
+    "/home/todd/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.24/microsoft.netcore.app.host.linux-x64.6.0.24.nupkg.sha512"
+  ],
+  "logs": []
+}

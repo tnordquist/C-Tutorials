@@ -1,0 +1,32 @@
+Hangman
+
+1. Start a game
+2. One of the Five words is chosen and added to the secret String or structure
+2. Randomly choose a word
+3. Add the word to the guess structure, such as list or even string
+4. Initialize guessesLeft to number of distinct letters in the word
+5. Guess a letter
+6. Compare the guessed letter to the word structure.
+7. Is the letter in the randomly chosen word?
+4. If yes remove any of the guessed letter from the word 
+5. Save that letter in the guessed correctly set
+6. Guess wrong?
+	a. Guessing the wrong letter is neutral; guess again
+	a. Add letter to guessed wrong list if chosen wrong and not guessed
+	before.
+	b. Subtract from number left in guessesLeft
+7. With each guess determine if all guesses have been used up.
+	a. All used up, you lose
+	b. Word guessed, you win
+8. How do we know the guesser has won?
+	a. If a letter(s) is guessed correctly
+	
+	h e l l o
+	
+	If user guesses l, then what? 
+	a. A list, or array, of int of length of the word can be made
+	b. The structure is intialized to all zeros.
+	c. E.g., guess l, then guessedRight structure comes {1, 1, 0, 0, 0}
+	c. If all the positions contain 1 and guessesLeft != 0,
+		then the guesser has won. 
+	

@@ -25,13 +25,19 @@ namespace HangMan
         {
             CreateWordPool();
 
-            Console.WriteLine("Play a game of hangman? 0 for no, 1 for yes");
+            Console.WriteLine("Play a game of hangman? Yes or No?");
 
-            int input = int.Parse(Console.ReadLine());
+            string input;
 
+        
+            input = Console.ReadLine(); 
 
-
-            if (input == 1)
+            if (input == "No".ToLower() || input == "N".ToLower())
+            {
+                Console.WriteLine("See you next game.");
+                return;
+            }
+            else if (input.Equals("yes".ToLower()) || input.Equals("y".ToLower()))
             {
                 Random rng = new(100);
                 int lowerBound = 0;
@@ -39,11 +45,22 @@ namespace HangMan
                 int rInt = rng.Next(lowerBound, upperBound);
                 secretWord = wordPool[rInt];
                 secretCharPositions = new int[secretWord.Length];
+                Console.WriteLine("I take that answer for a yes. Guess a letter");
+            } 
+            else
+            {
+                Random rng = new(100);
+                int lowerBound = 0;
+                int upperBound = 4;
+                int rInt = rng.Next(lowerBound, upperBound);
+                secretWord = wordPool[rInt];
+                secretCharPositions = new int[secretWord.Length];
+                Console.WriteLine("Guess a letter");
             }
 
-            while (guessesLeft > 0)
+            while (won == false && guessesLeft > 0)
             {
-                string letterGuessed = (Console.ReadLine()).ToLower();
+                string letterGuessed = Console.ReadLine().ToLower();
 
                 if (secretWord.Contains(letterGuessed))
                 {
@@ -63,30 +80,32 @@ namespace HangMan
                 }
                 else
                 {
-                    Console.WriteLine("Wrong guess");
-                    guessesLeft--;
+                    Console.WriteLine("Wrong guess. You have " + --guessesLeft + " guesses left.");
                 }
                 Console.Clear();
                 if (wordLength == secretWord.Length)
                 {
-                    Console.WriteLine("You won: the correct word was " + secretWord);
                     won = true;
                 }
             }
-                if(won == false)
-                {
+            if (won == false)
+            {
                 Console.WriteLine("Sorry, you are out of guesses: the correct word was " + secretWord);
-                }
+            }
+            else
+            {
+                Console.WriteLine("You won: the correct word was " + secretWord);
+            }
         }
 
         private static void CreateWordPool()
         {
 
-            wordPool.Add("Hello".ToLower());
-            wordPool.Add("catepillar");
+            wordPool.Add("low");
+            wordPool.Add("pillar");
             wordPool.Add("house");
-            wordPool.Add("Sink".ToLower());
-            wordPool.Add("hydroponics");
+            wordPool.Add("Sink");
+            wordPool.Add("it");
         }
     }
 }

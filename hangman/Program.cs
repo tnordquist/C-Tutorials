@@ -29,24 +29,14 @@ namespace HangMan
 
             string input;
 
-        
-            input = Console.ReadLine(); 
+
+            input = Console.ReadLine();
 
             if (input == "No".ToLower() || input == "N".ToLower())
             {
                 Console.WriteLine("See you next game.");
                 return;
             }
-            else if (input.Equals("yes".ToLower()) || input.Equals("y".ToLower()))
-            {
-                Random rng = new(100);
-                int lowerBound = 0;
-                int upperBound = 4;
-                int rInt = rng.Next(lowerBound, upperBound);
-                secretWord = wordPool[rInt];
-                secretCharPositions = new int[secretWord.Length];
-                Console.WriteLine("I take that answer for a yes. Guess a letter");
-            } 
             else
             {
                 Random rng = new(100);
@@ -55,7 +45,7 @@ namespace HangMan
                 int rInt = rng.Next(lowerBound, upperBound);
                 secretWord = wordPool[rInt];
                 secretCharPositions = new int[secretWord.Length];
-                Console.WriteLine("Guess a letter");
+                Console.WriteLine("I take that answer for a yes. Guess a letter");
             }
 
             while (won == false && guessesLeft > 0)
@@ -70,17 +60,25 @@ namespace HangMan
                         {
                             secretCharPositions[i] = 1;
                             wordLength++;
-                            Console.WriteLine("You guessed correctly");
+                            Console.WriteLine("You guessed correctly; you have " + guessesLeft + " guesses left. Guess again");
+                            continue;
                         }
                         else if (secretCharPositions[i] == 1 && secretWord[i].ToString().Equals(letterGuessed))
                         {
-                            Console.WriteLine("You already guessed that letter");
+                            Console.WriteLine("You already guessed that letter. Try another letter. You have " + guessesLeft + " guesses left.");
+                            continue;
                         }
                     }
+                }
+                else if (guessesLeft == 1)
+                {
+                    --guessesLeft;
+                    won = false;
                 }
                 else
                 {
                     Console.WriteLine("Wrong guess. You have " + --guessesLeft + " guesses left.");
+                    MakeHangMan(guessesLeft);
                 }
                 Console.Clear();
                 if (wordLength == secretWord.Length)
@@ -90,6 +88,7 @@ namespace HangMan
             }
             if (won == false)
             {
+                MakeHangMan(guessesLeft);
                 Console.WriteLine("Sorry, you are out of guesses: the correct word was " + secretWord);
             }
             else
@@ -104,8 +103,33 @@ namespace HangMan
             wordPool.Add("low");
             wordPool.Add("pillar");
             wordPool.Add("house");
-            wordPool.Add("Sink");
+            wordPool.Add("Sink".ToLower());
             wordPool.Add("it");
+        }
+
+        private static int MakeHangMan(int GuessesLeft)
+        {
+
+            switch (guessesLeft)
+            {
+                case 4:
+                    Console.WriteLine("   __\n /x x\\\n  --- ");
+                    break;
+                case 3:
+                    Console.WriteLine("   __\n /x x\\\n  --- \n   |");
+                    break;
+                case 2:
+                    Console.WriteLine("   __\n /x x\\\n  --- \n__ | __");
+                    break;
+                case 1:
+                    Console.WriteLine("   __\n  /x x\\\n   --- \n __ | __\n    |");
+                    break;
+                case 0:
+                    Console.WriteLine("   __\n  /x x\\\n   --- \n __ | __\n    |\n   / \\");
+                    break;
+            }
+
+            return 0;
         }
     }
 }

@@ -27,10 +27,7 @@ namespace HangMan
 
             Console.WriteLine("Play a game of hangman? Yes or No?");
 
-            string input;
-
-
-            input = Console.ReadLine();
+            string input = Console.ReadLine().ToLower();
 
             if (input == "No".ToLower() || input == "N".ToLower())
             {
@@ -46,28 +43,31 @@ namespace HangMan
                 secretWord = wordPool[rInt];
                 secretCharPositions = new int[secretWord.Length];
                 Console.WriteLine("I take that answer for a yes. Guess a letter");
+                input = Console.ReadLine().ToLower();
             }
 
             while (won == false && guessesLeft > 0)
             {
-                string letterGuessed = Console.ReadLine().ToLower();
 
-                if (secretWord.Contains(letterGuessed))
+                if (secretWord.Contains(input))
                 {
                     for (int i = 0; i < secretWord.Length; i++)
                     {
-                        if (secretCharPositions[i] != 1 && secretWord[i].ToString().Equals(letterGuessed))
+                        if (secretCharPositions[i] == 1 && secretWord[i].ToString().Equals(input))
+                        {
+                            Console.WriteLine("You already guessed that letter. Try another letter. You have " + guessesLeft + " guesses left.");
+                            Console.Clear();
+                            input = Console.ReadLine().ToLower();
+
+                        }
+                        else if (secretCharPositions[i] != 1 && secretWord[i].ToString().Equals(input))
                         {
                             secretCharPositions[i] = 1;
                             wordLength++;
                             Console.WriteLine("You guessed correctly; you have " + guessesLeft + " guesses left. Guess again");
-                            continue;
+                            
                         }
-                        else if (secretCharPositions[i] == 1 && secretWord[i].ToString().Equals(letterGuessed))
-                        {
-                            Console.WriteLine("You already guessed that letter. Try another letter. You have " + guessesLeft + " guesses left.");
-                            continue;
-                        }
+                        
                     }
                 }
                 else if (guessesLeft == 1)
@@ -78,17 +78,17 @@ namespace HangMan
                 else
                 {
                     Console.WriteLine("Wrong guess. You have " + --guessesLeft + " guesses left.");
-                    MakeHangMan(guessesLeft);
+                    Console.WriteLine(MakeHangMan(guessesLeft));
                 }
-                Console.Clear();
                 if (wordLength == secretWord.Length)
                 {
                     won = true;
                 }
+                input = Console.ReadLine();
             }
             if (won == false)
             {
-                MakeHangMan(guessesLeft);
+                Console.WriteLine(MakeHangMan(guessesLeft));
                 Console.WriteLine("Sorry, you are out of guesses: the correct word was " + secretWord);
             }
             else
@@ -107,29 +107,24 @@ namespace HangMan
             wordPool.Add("it");
         }
 
-        private static int MakeHangMan(int GuessesLeft)
+        public static string MakeHangMan(int GuessesLeft)
         {
-
             switch (guessesLeft)
             {
                 case 4:
-                    Console.WriteLine("   __\n /x x\\\n  --- ");
-                    break;
+                    return "   __\n /x x\\\n  --- ";
                 case 3:
-                    Console.WriteLine("   __\n /x x\\\n  --- \n   |");
-                    break;
+                    return "   __\n /x x\\\n  --- \n   |";
                 case 2:
-                    Console.WriteLine("   __\n /x x\\\n  --- \n__ | __");
-                    break;
+                    return "   __\n /x x\\\n  --- \n__ | __";
                 case 1:
-                    Console.WriteLine("   __\n  /x x\\\n   --- \n __ | __\n    |");
-                    break;
+                    return "   __\n  /x x\\\n   --- \n __ | __\n    |";
                 case 0:
-                    Console.WriteLine("   __\n  /x x\\\n   --- \n __ | __\n    |\n   / \\");
-                    break;
+                    return "   __\n  /x x\\\n   --- \n __ | __\n    |\n   / \\";
+                default:
+                    return "";
             }
-
-            return 0;
+            
         }
     }
 }

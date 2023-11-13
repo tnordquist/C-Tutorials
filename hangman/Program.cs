@@ -38,7 +38,7 @@ namespace HangMan
             {
                 Random rng = new(100);
                 int lowerBound = 0;
-                int upperBound = 4;
+                int upperBound = wordPool.Count;
                 int rInt = rng.Next(lowerBound, upperBound);
                 secretWord = wordPool[rInt];
                 secretCharPositions = new int[secretWord.Length];
@@ -56,35 +56,41 @@ namespace HangMan
                         if (secretCharPositions[i] == 1 && secretWord[i].ToString().Equals(input))
                         {
                             Console.WriteLine("You already guessed that letter. Try another letter. You have " + guessesLeft + " guesses left.");
-                            Console.Clear();
                             input = Console.ReadLine().ToLower();
 
                         }
                         else if (secretCharPositions[i] != 1 && secretWord[i].ToString().Equals(input))
                         {
                             secretCharPositions[i] = 1;
-                            wordLength++;
-                            Console.WriteLine("You guessed correctly; you have " + guessesLeft + " guesses left. Guess again");
-                            
+                            ++wordLength;
+
                         }
-                        
+
                     }
-                }
-                else if (guessesLeft == 1)
-                {
-                    --guessesLeft;
-                    won = false;
+                    if (wordLength == secretWord.Length)
+                    {
+                        won = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("You guessed correctly; you have " + guessesLeft + " guesses left. Guess again");
+                        input = Console.ReadLine();
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("Wrong guess. You have " + --guessesLeft + " guesses left.");
-                    Console.WriteLine(MakeHangMan(guessesLeft));
+                    guessesLeft--;
+                    if (guessesLeft == 0)
+                    {
+                        won = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Wrong guess. You have " + ((guessesLeft == 1) ? " one guess " : guessesLeft + " guesses") + " left. Guess again.");
+                        Console.WriteLine(MakeHangMan(guessesLeft));
+                        input = Console.ReadLine();
+                    }
                 }
-                if (wordLength == secretWord.Length)
-                {
-                    won = true;
-                }
-                input = Console.ReadLine();
             }
             if (won == false)
             {
@@ -104,7 +110,7 @@ namespace HangMan
             wordPool.Add("pillar");
             wordPool.Add("house");
             wordPool.Add("Sink".ToLower());
-            wordPool.Add("it");
+            wordPool.Add("cousin");
         }
 
         public static string MakeHangMan(int GuessesLeft)
@@ -124,7 +130,7 @@ namespace HangMan
                 default:
                     return "";
             }
-            
+
         }
     }
 }
